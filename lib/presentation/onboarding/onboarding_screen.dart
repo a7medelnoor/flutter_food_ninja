@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja/main.dart';
 import 'package:food_ninja/presentation/onboarding/slider_model.dart';
 import 'package:food_ninja/presentation/onboarding/slider.dart';
+import 'package:food_ninja/presentation/signup/signup_screen.dart';
 import 'package:food_ninja/util/app_colors.dart';
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -68,7 +69,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       duration: Duration(milliseconds: 100), curve: Curves.bounceIn);
                 } else if (currentIndex == 1) {  // If on the second slide
                   Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (context) => MyHomePage()));
+                      context, MaterialPageRoute(builder: (context) => SignUpScreen()));
                 }
               },
               child: const Text("Next"),
