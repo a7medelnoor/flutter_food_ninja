@@ -70,6 +70,9 @@ flutter:
    - assets/images/food_logo.png
    - assets/images/onboarding_image_1.png
    - assets/images/onboarding_image_2.png
+   - assets/images/singup_pattern.png
+   - assets/images/facebook.png
+   - assets/images/google.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

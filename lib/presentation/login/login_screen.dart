@@ -1,18 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/presentation/login/login_screen.dart';
+import 'package:food_ninja/presentation/signup/signup_screen.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
-  bool keepMeSignedIn = false; // Initialize checkbox value
-  bool EmailMeAboutSpecilPricing = false; // Initialize checkbox value
-
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,14 +25,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               width: 200,
               margin: EdgeInsets.only(top: 80, bottom: 0),
               child: Image.asset("assets/images/food_logo.png"),
-            )
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 300),
             child: Align(
               alignment: Alignment.topCenter,
               child: Text(
-                "Sign Up For Free",
+                "Login To Your Account",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.black,
@@ -72,26 +69,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         filled: true,
                         border: InputBorder.none,
                         // Remove default border
-                        labelText: "Name",
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your name';
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8), // Add radius
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        // Set background color to white
-                        filled: true,
-                        border: InputBorder.none,
-                        // Remove default border
                         labelText: "Email",
                       ),
                       validator: (value) {
@@ -102,7 +79,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       },
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 16),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8), // Add radius
                     child: TextFormField(
@@ -123,72 +100,83 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       },
                     ),
                   ),
-                  SizedBox(height: 10),
-              Row(
-                children: [
-                  Theme(
-                    data: Theme.of(context).copyWith(
-                      unselectedWidgetColor: Colors.white,
-                    ),
-                    child: Transform.scale(
-                      scale: 1.5,
-                      child: Checkbox(
-                        value: keepMeSignedIn,
-                        onChanged: (newValue) {
-                          setState(() {
-                            keepMeSignedIn = newValue!;
-                          });
-                        },
-                        shape: CircleBorder(),
-                        checkColor: Colors.white,
-                        activeColor: Colors.green,
-                      ),
-                    ),
-                  ),
+                  SizedBox(height: 16),
                   Text(
-                    "Keep Me Signed In",
+                    "or Continue with",
                     style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 12,
-                    ),
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
                   ),
-                ],
-              ),
-
+                  SizedBox(height: 16),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Theme(
-                        data: Theme.of(context).copyWith(
-                          unselectedWidgetColor: Colors.white,
+                      Container(
+                        width: 150,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Transform.scale(
-                          scale: 1.5,
-                          child: Checkbox(
-                            value: EmailMeAboutSpecilPricing,
-                            onChanged: (newValue) {
-                              setState(() {
-                                EmailMeAboutSpecilPricing = newValue!;
-                              });
-                            },
-                            shape: CircleBorder(),
-                            checkColor: Colors.white,
-                            activeColor: Colors.green,
-                          ),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Image.asset(
+                                "assets/images/facebook.png",
+                                // Replace with your image path
+                                width: 30, // Adjust the image size as needed
+                                height: 30,
+                              ),
+                            ),
+                            Text(
+                              "Facebook",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Text(
-                        "Email Me About Special Pricing",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 12
+                      SizedBox(width: 18),
+                      Container(
+                        width: 140,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              child: Image.asset(
+                                "assets/images/google.png",
+                                // Replace with your image path
+                                width: 30, // Adjust the image size as needed
+                                height: 30,
+                              ),
+                            ),
+                            Text(
+                              "Google",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
-
-                  SizedBox(height: 10),
+                  SizedBox(height: 16),
+                  Text(
+                    "Forget your passowrd?",
+                    style: TextStyle(color: Colors.green, fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
                       // Implement login functionality
@@ -201,24 +189,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         minimumSize: Size(130,50)
                     ),
                     child: Text(
-                      "Create Account",
+                      "Login",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16
                       ),
                     ),
                   ),
-                  SizedBox(height: 16),
-                  InkWell(
-                    onTap: (){
-                      Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (context) => LoginScreen()));
-                    },
-                    child: Text(
-                      "Already have an account?",
-                      style: TextStyle(color: Colors.green, fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                  SizedBox(height: 20),
+                   InkWell(
+                     onTap: (){
+                       Navigator.pushReplacement(
+                           context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+                     },
+                     child: Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 16
+                        ),
+                      ),
+                   ),
+
                 ],
               ),
             ),
