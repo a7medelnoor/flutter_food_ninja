@@ -73,7 +73,25 @@ flutter:
    - assets/images/singup_pattern.png
    - assets/images/facebook.png
    - assets/images/google.png
-
+   - assets/images/icon_back.png
+   - assets/images/paypal.png
+   - assets/images/app_icon.png
+   - assets/images/visa.png
+   - assets/images/payoneer.png
+   - assets/images/from_gallery.png
+   - assets/images/take_photo.png
+   - assets/images/profile_picture.png
+   - assets/images/pin_location.png
+   - assets/images/sign_up_done.png
+   - assets/images/frame_verification.png
+   - assets/images/via_email.png
+   - assets/images/via_sms.png
+   - assets/images/show_password.png
+   - assets/images/hide_password.png
+   - assets/images/home_icon.png
+   - assets/images/profile_icon_no_active.png
+   - assets/images/cart_icon_no_active.png
+   - assets/images/chat_icon_no_active.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

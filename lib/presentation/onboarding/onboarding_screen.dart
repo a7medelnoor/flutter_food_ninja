@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/main.dart';
+import 'package:food_ninja/presentation/dashboard/dashboard.dart';
 import 'package:food_ninja/presentation/onboarding/slider_model.dart';
 import 'package:food_ninja/presentation/onboarding/slider.dart';
 import 'package:food_ninja/presentation/login/login_screen.dart';
@@ -33,6 +34,30 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => DashboardScreen()),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Center(
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                    color: AppColors.PrimaryColor,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           Expanded(

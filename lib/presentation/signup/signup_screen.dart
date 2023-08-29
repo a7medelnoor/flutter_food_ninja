@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/presentation/login/login_screen.dart';
+import 'package:food_ninja/presentation/signup/fill_in_bio.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -191,7 +192,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () {
-                      // Implement login functionality
+                      Navigator.pushReplacement(
+                          context, MaterialPageRoute(builder: (context) => FillInScreen()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green,
