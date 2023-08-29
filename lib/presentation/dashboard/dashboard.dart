@@ -90,7 +90,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           width: 25,
           height: 25,
         ),
-\
         label: 'Home',
                 ),
                 BottomNavigationBarItem(
