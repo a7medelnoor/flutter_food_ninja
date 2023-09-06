@@ -105,6 +105,9 @@ flutter:
    - assets/images/products/organic.png
    - assets/images/menu/menu1.png
    - assets/images/menu/menu2.png
+   - assets/images/chat/anamwap.png
+   - assets/images/chat/guy_hawkins.png
+   - assets/images/chat/leslie.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

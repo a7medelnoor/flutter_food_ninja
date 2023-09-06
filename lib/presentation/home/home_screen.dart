@@ -457,14 +457,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Herbal Pancake",
+                              "Fruit Salad",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                               ),
                             ),
                             Text(
-                              "Warung Herbal", // Replace with your time data
+                              "Wijie Resto", // Replace with your time data
                               style: TextStyle(
                                 color: Colors.grey,
                               ),
@@ -474,7 +474,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         SizedBox(width: 10,),
                         Text(
-                          '\$7', // Replace with your time data
+                          '\$5', // Replace with your time data
                           style: TextStyle(
                             color: Color(0XFFFEAD1D),
                             fontWeight: FontWeight.w800,
