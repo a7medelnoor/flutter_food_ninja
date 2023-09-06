@@ -96,6 +96,11 @@ flutter:
    - assets/images/cart_icon_no_active.png
    - assets/images/chat_icon_no_active.png
    - assets/images/chat_active.png
+   - assets/images/icon_notification.png
+   - assets/images/search_icon.png
+   - assets/images/filter_icon.png
+   - assets/images/ice_cream.png
+   - assets/images/promo_frame.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
