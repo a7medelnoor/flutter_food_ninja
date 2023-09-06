@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja/presentation/signup/signup_screen.dart';
 
 import '../common/search_screen.dart';
+import 'menu/popular_menu_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -358,23 +359,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(height: 20),
                   Container(
                     padding: EdgeInsets.only(left: 20, right: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Popular Menu",
-                          style: TextStyle(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => PopularMenuScreen(),
+                        ));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Popular Menu",
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
-                              fontSize: 18),
-                        ),
-                        Text("View More",
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            "View More",
                             style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                color: Color(0XFFFF7C32),
-                                fontSize: 18)),
-                      ],
-                    ),
+                              fontWeight: FontWeight.normal,
+                              color: Color(0XFFFF7C32),
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 10, right: 10, top: 20),
