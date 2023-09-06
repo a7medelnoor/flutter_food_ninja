@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/presentation/signup/signup_screen.dart';
 
+import '../common/search_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -96,7 +98,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                   border: InputBorder.none,
                                 ),
+                                onTap: (){
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => SearchScreen(), // Replace with your SearchScreen
+                                  ));
+                                },
                               ),
+
                             ),
                           ),
                         ),
