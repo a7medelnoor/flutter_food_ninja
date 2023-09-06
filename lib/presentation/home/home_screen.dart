@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/presentation/home/restaurant/popular_restaurant_screen.dart';
 import 'package:food_ninja/presentation/signup/signup_screen.dart';
 
 import '../common/search_screen.dart';
@@ -183,22 +184,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(height: 20),
                   Container(
                     padding: EdgeInsets.only(left: 20, right: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Nearest Restaurant",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                              fontSize: 18),
-                        ),
-                        Text("View More",
+                    child: GestureDetector(
+                      onTap: (){Navigator.of(context).push(MaterialPageRoute(
+    builder: (context) => PopularRestaurantScreen(),
+    ));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Nearest Restaurant",
                             style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                color: Color(0XFFFF7C32),
-                                fontSize: 18)),
-                      ],
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 18),
+                          ),
+                          Text("View More",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.normal,
+                                  color: Color(0XFFFF7C32),
+                                  fontSize: 18)),
+                        ],
+                      ),
                     ),
                   ),
                   Container(

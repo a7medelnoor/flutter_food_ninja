@@ -103,6 +103,10 @@ flutter:
    - assets/images/promo_frame.png
    - assets/images/products/vegan_flower.png
    - assets/images/products/organic.png
+   - assets/images/products/rice.png
+   - assets/images/products/vegtable.png
+   - assets/images/products/good_food.png
+   - assets/images/products/smart_resto.png
    - assets/images/menu/menu1.png
    - assets/images/menu/menu2.png
    - assets/images/menu/menu3.png
