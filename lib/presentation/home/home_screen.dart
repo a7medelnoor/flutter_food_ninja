@@ -18,7 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             child: Image.asset("assets/images/singup_pattern.png"),
           ),
-          Text("test ")
         ],
       ),
     );

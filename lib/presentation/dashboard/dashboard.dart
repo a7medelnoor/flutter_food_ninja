@@ -28,21 +28,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            child: Image.asset("assets/images/singup_pattern.png"),
-          ),
-        ],
-      ),
+      body: _screens[_selectedIndex],
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.only(bottom: 10, left: 30, right: 30),
+        padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(20),
-              topLeft: Radius.circular(20),
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
+              topRight: Radius.circular(25),
+              topLeft: Radius.circular(25),
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25)
 
           ),
           boxShadow: [
@@ -50,19 +44,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ],
         ),
         child: Container(
-          padding: EdgeInsets.only(left: 20),
           child: ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(25.0),
-              topRight: Radius.circular(25.0),
-              bottomRight: Radius.circular(25.0),
-              bottomLeft: Radius.circular(25.0),
+              topLeft: Radius.circular(30.0),
+              topRight: Radius.circular(30.0),
+              bottomRight: Radius.circular(30.0),
+              bottomLeft: Radius.circular(30.0),
             ),
             child: BottomNavigationBar(
               items: [
                 BottomNavigationBarItem(
                   icon: _selectedIndex == 0 ? Container(
-                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20), // Adjust padding
+                    margin: EdgeInsets.only(left: 10,top: 10),
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 0,), // Adjust padding
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: _selectedIndex == 0
@@ -78,23 +72,33 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                       ),
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    child: Image.asset(
-                      "assets/images/home_icon.png",
-                      width: 25,
-                      height: 25,
+                    child: Container(
+                      padding: EdgeInsets.only(left: 10),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/home_icon.png",
+                            width: 25,
+                            height: 25,
+                          ),
+                          SizedBox(width: 10,),
+                          Expanded(child: Text("Home", style: TextStyle(fontWeight: FontWeight.bold),))
+                        ],
+                      ),
                     ),
                   ): Image.asset(
-          "assets/images/home_icon.png",
+          "assets/images/home_no_active.png",
           width: 25,
           height: 25,
         ),
-        label: 'Home',
+        label: '',
                 ),
                 BottomNavigationBarItem(
                   icon: _selectedIndex == 1 ? Container(
-                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20), // Adjust padding
+                    margin: EdgeInsets.only(left: 10,top: 10),
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 0), // Adjust padding
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: _selectedIndex == 1
@@ -110,16 +114,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    child: Image.asset(
-                      "assets/images/profile_icon_no_active.png",
-                      width: 25,
-                      height: 25,
+                    child: Container(                      padding: EdgeInsets.only(left: 10),
+
+
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/profile_icon_no_active.png",
+                            width: 25,
+                            height: 25,
+                          ),
+                          SizedBox(width: 10,),
+                          Expanded(child: Text("Profile", style: TextStyle(fontWeight: FontWeight.bold),))
+
+                        ],
+                      ),
                     ),
                   ) :
                   Image.asset(
-                    "assets/images/profile_icon_no_active.png",
+                    "assets/images/profile_no_active.png",
                     width: 25,
                     height: 25,
                   ),
@@ -127,7 +142,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 BottomNavigationBarItem(
                   icon:  _selectedIndex == 2 ? Container(
-                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20), // Adjust padding
+                    margin: EdgeInsets.only(left: 10,top: 10),
+
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 0), // Adjust padding
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: _selectedIndex == 2
@@ -143,13 +160,23 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    child: Image.asset(
-                      "assets/images/cart_icon_no_active.png",
-                      width: 25,
-                      height: 25,
-                    ),
+                    child: Container(
+                      padding: EdgeInsets.only(left: 10),
+
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/cart_icon_no_active.png",
+                            width: 25,
+                            height: 25,
+                          ),
+                          SizedBox(width: 10,),
+                          Expanded(child: Text("Cart", style: TextStyle(fontWeight: FontWeight.bold),))
+                        ],
+                      ),
+                    )
                   ) :
                   Image.asset(
                     "assets/images/cart_icon_no_active.png",
@@ -160,7 +187,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 BottomNavigationBarItem(
                   icon:  _selectedIndex == 3 ? Container(
-                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20), // Adjust padding
+                    margin: EdgeInsets.only(left: 10,top: 10,right: 10),
+
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 0), // Adjust padding
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: _selectedIndex == 3
@@ -176,12 +205,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    child: Image.asset(
-                      "assets/images/chat_icon_no_active.png",
-                      width: 25,
-                      height: 25,
+                    child: Container(
+                      padding: EdgeInsets.only(left: 10),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/chat_active.png",
+                            width: 25,
+                            height: 25,
+                          ),
+                          SizedBox(width: 10,),
+                          Expanded(child: Text("Chat", style: TextStyle(fontWeight: FontWeight.bold),))
+                        ],
+                      ),
                     ),
                   ):
                   Image.asset(
