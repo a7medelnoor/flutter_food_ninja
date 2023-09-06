@@ -101,6 +101,10 @@ flutter:
    - assets/images/filter_icon.png
    - assets/images/ice_cream.png
    - assets/images/promo_frame.png
+   - assets/images/products/vegan_flower.png
+   - assets/images/products/organic.png
+   - assets/images/menu/menu1.png
+   - assets/images/menu/menu2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
