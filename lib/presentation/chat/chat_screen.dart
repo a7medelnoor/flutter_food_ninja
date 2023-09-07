@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja/presentation/chat/chat_details_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -43,7 +44,7 @@ class _ChatScreenState extends State<ChatScreen> {
             left: 20,
             right: 20,
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.only( left: 5, top: 5, bottom: 5),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -56,39 +57,50 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                 ],
               ),
-              child: Row(
-                children: [
-                  Image.asset("assets/images/chat/anamwap.png", width: 80, height: 80,),
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ChatDetailsScreen(),
+                  ));
+                },
+                child: Row(
+                  children: [
+                    Image.asset("assets/images/chat/anamwap.png", width: 80, height: 80,),
 
-                  SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ananmwp",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Ananmwp",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          "Your Order Just Arrived!",
-                          style: TextStyle(
-                            color: Colors.grey,
+                          SizedBox(height: 5),
+                          Text(
+                            "Your Order Just Arrived!",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15
+                            ),
                           ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20,right: 10),
+                      child: Text(
+                        "20:00",
+                        style: TextStyle(
+                          color: Colors.grey,
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  Text(
-                    "20:00",
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -98,7 +110,7 @@ class _ChatScreenState extends State<ChatScreen> {
             left: 20,
             right: 20,
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.only( left: 5, top: 5, bottom: 5),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -111,39 +123,50 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                 ],
               ),
-              child: Row(
-                children: [
-                  Image.asset("assets/images/chat/guy_hawkins.png", width: 80, height: 80,),
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ChatDetailsScreen(),
+                  ));
+                },
+                child: Row(
+                  children: [
+                    Image.asset("assets/images/chat/guy_hawkins.png", width: 80, height: 80,),
 
-                  SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ananmwp",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Ananmwp",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          "Your Order Just Arrived!",
-                          style: TextStyle(
-                            color: Colors.grey,
+                          SizedBox(height: 5),
+                          Text(
+                            "Your Order Just Arrived!",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15
+                            ),
                           ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20,right: 10),
+                      child: Text(
+                        "20:00",
+                        style: TextStyle(
+                          color: Colors.grey,
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  Text(
-                    "20:00",
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -153,7 +176,7 @@ class _ChatScreenState extends State<ChatScreen> {
             left: 20,
             right: 20,
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.only( left: 5, top: 5, bottom: 5),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -166,39 +189,50 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                 ],
               ),
-              child: Row(
-                children: [
-                  Image.asset("assets/images/chat/leslie.png", width: 80, height: 80,),
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ChatDetailsScreen(),
+                  ));
+                },
+                child: Row(
+                  children: [
+                    Image.asset("assets/images/chat/leslie.png", width: 80, height: 80,),
 
-                  SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ananmwp",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Ananmwp",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          "Your Order Just Arrived!",
-                          style: TextStyle(
-                            color: Colors.grey,
+                          SizedBox(height: 5),
+                          Text(
+                            "Your Order Just Arrived!",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15
+                            ),
                           ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20,right: 10),
+                      child: Text(
+                        "20:00",
+                        style: TextStyle(
+                          color: Colors.grey,
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  Text(
-                    "20:00",
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
