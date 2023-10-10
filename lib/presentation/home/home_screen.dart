@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/presentation/home/restaurant/popular_restaurant_screen.dart';
+import 'package:food_ninja/presentation/notification/notification_screen.dart';
+import 'package:food_ninja/presentation/order/confirm_order_screen.dart';
+import 'package:food_ninja/presentation/payment/payment_screen.dart';
 import 'package:food_ninja/presentation/signup/signup_screen.dart';
 
 import '../common/search_screen.dart';
@@ -55,10 +58,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                           padding: EdgeInsets.all(10), // Adjust padding as needed
-                          child: Image.asset(
-                            "assets/images/icon_notification.png",
-                            width: 25,
-                            height: 25,
+                          child: Container(
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => NotificationScreen()),
+                                );
+                            },
+                              child: Image.asset(
+                                "assets/images/icon_notification.png",
+                                width: 25,
+                                height: 25,
+                              ),
+                            ),
                           ),
                         ),
                       ],
@@ -111,10 +124,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         SizedBox(width: 10),
-                        Image.asset(
-                          "assets/images/filter_icon.png",
-                          width: 50,
-                          height: 50,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => PaymentScreen()),
+                            );
+                          },
+                          child: Image.asset(
+                            "assets/images/filter_icon.png",
+                            width: 50,
+                            height: 50,
+                          ),
                         ),
                       ],
                     ),
@@ -233,12 +254,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  width: 80,
-                                  height: 80, // Set the desired image height
-                                  child: Image.asset(
-                                    "assets/images/products/vegan_flower.png",
+                                GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => ConfirmOrderScreen()),
+                                    );
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.only(top: 10),
+                                    width: 80,
+                                    height: 80, // Set the desired image height
+                                    child: Image.asset(
+                                      "assets/images/products/vegan_flower.png",
+                                    ),
                                   ),
                                 ),
                                 Padding(

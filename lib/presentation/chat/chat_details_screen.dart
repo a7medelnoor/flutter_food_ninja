@@ -1,4 +1,10 @@
   import 'package:flutter/material.dart';
+import 'package:food_ninja/presentation/call/call_ringing.dart';
+import 'package:food_ninja/presentation/order/finish_order_screen.dart';
+import 'package:food_ninja/presentation/order/rate_order_screen.dart';
+import 'package:food_ninja/presentation/order/rate_restaurant_screen.dart';
+
+import '../voucher/vocher_pomo_screen.dart';
 
   class ChatDetailsScreen extends StatefulWidget {
     const ChatDetailsScreen({super.key});
@@ -97,12 +103,20 @@
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 10, right: 20),
-                      child: Image.asset(
-                        "assets/images/chat/call_icon.png",
-                        width: 40,
-                        height: 40,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => VoucherPromoScreen()),
+                        );
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: 10, right: 20),
+                        child: Image.asset(
+                          "assets/images/chat/call_icon.png",
+                          width: 40,
+                          height: 40,
+                        ),
                       ),
                     ),
                   ],

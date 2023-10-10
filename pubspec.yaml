@@ -116,6 +116,36 @@ flutter:
    - assets/images/chat/call_icon.png
    - assets/images/chat/online.png
    - assets/images/chat/send.png
+   - assets/images/call/caller_profile.png
+   - assets/images/call/finish_order_rating.png
+   - assets/images/call/rate_order_image.png
+   - assets/images/call/rate_resturant.png
+   - assets/images/call/edit_icon.png
+   - assets/images/call/voucher1.png
+   - assets/images/call/voucher2.png
+   - assets/images/call/order_canclled.png
+   - assets/images/call/mute_icon.png
+   - assets/images/call/money_icon.png
+   - assets/images/call/finish_order_rating.png
+   - assets/images/call/edit_icon.png
+   - assets/images/call/close_icon.png
+   - assets/images/call/checked_notification.png
+   - assets/images/call/speaker_icon.png
+   - assets/images/call/finished_order_profile.png
+   - assets/images/call/done_icon.png
+   - assets/images/place_order/order1.png
+   - assets/images/place_order/order2.png
+   - assets/images/place_order/order3.png
+   - assets/images/place_order/bottom_patterns_place_order.png
+   - assets/images/place_order/minus_icon.png
+   - assets/images/place_order/plus_icon.png
+   - assets/images/place_order/cart_menu1.png
+   - assets/images/place_order/cart_menu2.png
+   - assets/images/place_order/cart_menu3.png
+   - assets/images/place_order/icon_location.png
+   - assets/images/place_order/payment_payoneer.png
+   - assets/images/place_order/payment_paypal.png
+   - assets/images/place_order/payment_visa.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
