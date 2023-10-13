@@ -108,7 +108,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
               ),
             ),
             Positioned(
-              top: 30,
+              top: 320,
               left: 20,
               right: 10,
               child: Container(
