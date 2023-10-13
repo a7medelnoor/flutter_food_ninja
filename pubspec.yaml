@@ -146,6 +146,7 @@ flutter:
    - assets/images/place_order/payment_payoneer.png
    - assets/images/place_order/payment_paypal.png
    - assets/images/place_order/payment_visa.png
+   - assets/images/place_order/price_info_box.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

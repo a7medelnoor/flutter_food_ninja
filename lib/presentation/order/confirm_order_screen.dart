@@ -92,7 +92,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                         Image.asset(
                           "assets/images/place_order/icon_location.png",
                           width: 90,
-                          height: 90,
+                          height: 70,
                         ),
                         Text(
                           "4517 Washington Ave. Manchester,\n Kentucky 39495",
@@ -108,7 +108,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
               ),
             ),
             Positioned(
-              top: 340,
+              top: 30,
               left: 20,
               right: 10,
               child: Container(
@@ -162,7 +162,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                           Image.asset(
                             "assets/images/place_order/payment_paypal.png",
                             width: 100,
-                            height: 100,
+                            height: 70,
                           ),
                           SizedBox(
                             width: 40,
@@ -187,20 +187,23 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
               left: 10,
               right: 10,
               child: Container(
-                decoration: BoxDecoration(
+                width: double.infinity, // Set the width to expand to the full available width
+                height: 240, // Set your desired height
+                decoration:  BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(
-                        "assets/images/place_order/bottom_patterns_place_order.png"),
+                    image: AssetImage("assets/images/place_order/price_info_box.png"),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(18),
+                    topRight: Radius.circular(18),
                   ),
                 ),
                 child: Container(
-                  padding: EdgeInsets.all(16),
-                  color: Colors.green.withOpacity(0.8),
+                  padding: EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -212,6 +215,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white.withOpacity(0.9),
+                              fontWeight: FontWeight.w600
                             ),
                           ),
                           SizedBox(height: 10),
@@ -220,7 +224,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white.withOpacity(0.9),
-                              fontWeight: FontWeight.normal,
+                                fontWeight: FontWeight.w600
                             ),
                           )
                         ],
@@ -234,6 +238,8 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white.withOpacity(0.9),
+                                fontWeight: FontWeight.w600
+
                             ),
                           ),
                           SizedBox(height: 10),
@@ -242,7 +248,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white.withOpacity(0.9),
-                              fontWeight: FontWeight.normal,
+                                fontWeight: FontWeight.w600
                             ),
                           )
                         ],
@@ -256,6 +262,8 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white.withOpacity(0.9),
+                                fontWeight: FontWeight.w600
+
                             ),
                           ),
                           SizedBox(height: 10),
@@ -264,7 +272,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white.withOpacity(0.9),
-                              fontWeight: FontWeight.normal,
+                                fontWeight: FontWeight.w600
                             ),
                           )
                         ],
@@ -292,8 +300,9 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                           )
                         ],
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 5),
                       Container(
+                        padding: EdgeInsets.only(bottom: 10),
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
