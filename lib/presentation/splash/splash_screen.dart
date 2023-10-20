@@ -4,9 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/presentation/onboarding/onboarding_screen.dart';
 
-import '../RipplesAnimation.dart';
-import '../water_animation.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

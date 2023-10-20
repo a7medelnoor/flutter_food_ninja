@@ -35,6 +35,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  google_maps_flutter: ^2.5.0 # Use the latest version
+#  mapbox_gl: ^0.16.0
+  flutter_map: ^6.0.0
+  latlong2: ^0.9.0
+  google_maps_flutter_web: ^0.5.4+1
 
 dev_dependencies:
   flutter_test:
@@ -147,6 +152,11 @@ flutter:
    - assets/images/place_order/payment_paypal.png
    - assets/images/place_order/payment_visa.png
    - assets/images/place_order/price_info_box.png
+   - assets/images/place_order/call_icon.png
+   - assets/images/place_order/map_icon.png
+   - assets/images/place_order/message_button.png
+   - assets/images/place_order/track_order_profile_pic.png
+   - assets/images/place_order/track_order_pattern.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

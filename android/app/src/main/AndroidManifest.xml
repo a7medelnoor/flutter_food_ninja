@@ -1,9 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Include only if your app benefits from precise location access. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="food_ninja"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         >
+        <!-- TODO: Add your Google Maps API key here -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB8S4FiwCqCpw4dD0nS0477DciqkQ9z1XA"/>
+<!--        <meta-data android:name="com.mapbox.token" android:value="pk.eyJ1IjoiYWhtZWRlbG5vb3J2YWkiLCJhIjoiY2xudWI0cHJkMGJxZTJsbjFhanBteWprZSJ9.3bsWtCtrwrmJkJnNzduk4Q" />-->
         <activity
             android:name=".MainActivity"
             android:exported="true"

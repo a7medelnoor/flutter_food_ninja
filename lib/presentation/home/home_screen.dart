@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/presentation/home/restaurant/popular_restaurant_screen.dart';
+import 'package:food_ninja/presentation/location/set_location.dart';
 import 'package:food_ninja/presentation/notification/notification_screen.dart';
 import 'package:food_ninja/presentation/order/confirm_order_screen.dart';
+import 'package:food_ninja/presentation/order/order_details/order_details_screen.dart';
 import 'package:food_ninja/presentation/payment/payment_screen.dart';
 import 'package:food_ninja/presentation/signup/signup_screen.dart';
 
@@ -313,8 +315,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   padding: EdgeInsets.only(top: 10),
                                   width: 80,
                                   height: 80, // Set the desired image height
-                                  child: Image.asset(
-                                    "assets/images/products/organic.png",
+                                  child: GestureDetector(
+                                    onTap: (){
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => OrderDetailsScreen()),
+                                      );
+                                    },
+                                    child: Image.asset(
+                                      "assets/images/products/organic.png",
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -358,12 +368,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  width: 80,
-                                  height: 80, // Set the desired image height
-                                  child: Image.asset(
-                                    "assets/images/products/organic.png",
+                                GestureDetector(
+                                  onTap: (){Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => setLocationScreen(),
+                                  ));
+                                  }
+                                  ,child: Container(
+                                    padding: EdgeInsets.only(top: 10),
+                                    width: 80,
+                                    height: 80, // Set the desired image height
+                                    child: Image.asset(
+                                      "assets/images/products/organic.png",
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -546,6 +562,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 ],
               ),
+
             )
           ],
         ),
